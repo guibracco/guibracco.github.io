@@ -1,0 +1,9 @@
+- name: "Project One"
+  description: "One-liner explaining what it is and why it matters."
+  url: "https://github.com/guibracco/project-one"
+  tags: ["python", "cli"]
+
+- name: "Project Two"
+  description: "Another concise description."
+  url: "https://github.com/guibracco/project-two"
+  tags: ["web", "javascript"]
