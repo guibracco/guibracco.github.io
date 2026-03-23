@@ -1,4 +1,4 @@
-- name: "Talk-to_Data Slackbot"
+- name: "Talk-to-Data Slackbot"
   description: "A Slackbot that allows users to interact with data using natural language queries."
   url: "https://github.com/guibracco/talk-to-data-slackbot"
   tags: ["python", "slack", "data", "ai"]
