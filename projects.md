@@ -5,7 +5,8 @@ permalink: /projects/
 ---
 
 <div class="project-grid">
-{% for p in site.data.projects %}
+{% assign items = site.data.projects | sort: "sort" %}
+{% for p in items %}
   <div class="project-card">
     <h3><a href="{{ p.url }}">{{ p.name }}</a></h3>
     <p>{{ p.description }}</p>
