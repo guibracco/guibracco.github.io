@@ -1,9 +1,24 @@
-- name: "Project One"
-  description: "One-liner explaining what it is and why it matters."
-  url: "https://github.com/guibracco/project-one"
-  tags: ["python", "cli"]
+- name: "Talk-to_Data Slackbot"
+  description: "A Slackbot that allows users to interact with data using natural language queries."
+  url: "https://github.com/guibracco/talk-to-data-slackbot"
+  tags: ["python", "slack", "data", "ai"]
 
-- name: "Project Two"
-  description: "Another concise description."
-  url: "https://github.com/guibracco/project-two"
-  tags: ["web", "javascript"]
+- name: "Data Analyst Agent"
+  description: "An AI-powered multi-agent orchestrator that assists data analysts in generating insights and reports."
+  url: "https://github.com/guibracco/data-analyst-agent"
+  tags: ["python", "ai", "data-analysis"]
+
+- name: "Data Cleaning Agent"
+  description: "An AI-powered data cleaning agent built with LangChain + LangGraphthat and delivered through Streamlit."
+  url: "https://github.com/guibracco/data-cleaning-agent"
+  tags: ["python", "ai", "data-preprocessing"]
+
+- name: "EDA Workflow"
+  description: "An AI-powered exploratory data analysis workflow that performs consistent, first-pass analysis using LangChain and LangGraph. The workflow runs a fixed set of analysis tools, uses an LLM to extract observations after each step, and synthesizes findings into a summary with actionable recommendations."
+  url: "https://github.com/guibracco/eda-workflow"
+  tags: ["python", "ai", "data-analysis"]
+
+- name: "Fortnite Store Analysis"
+  description: "An analysis of the game item shop from the perspective of economic game design"
+  url: "https://github.com/guibracco/fortnite-store-analysis"
+  tags: ["python", "html", "data-analysis"]
