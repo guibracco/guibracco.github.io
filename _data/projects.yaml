@@ -16,7 +16,7 @@
   description: "Repeatable, first-pass EDA workflow that runs a fixed tool suite, extracts observations per step, and synthesizes actionable recommendations."
   url: "https://github.com/guibracco/eda-workflow"
   tags: ["python", "llm", "langchain", "langgraph", "data-analysis"]
-  featured: true
+  featured: false
   sort: 30
 
 - name: "Data Cleaning Agent"
