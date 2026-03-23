@@ -1,0 +1,95 @@
+---
+---
+
+@import "minima";
+
+/* --- Old-gold product-ish theme --- */
+:root {
+  --brand: #b08d57;          /* old gold */
+  --brand-strong: #8f6f3e;   /* darker gold for hover */
+  --ink: #0f172a;            /* deep slate */
+  --muted: #475569;          /* slate-600 */
+  --border: #e2e8f0;         /* slate-200 */
+  --bg: #ffffff;
+  --bg-soft: #fbf7f0;        /* warm near-white */
+  --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.wrapper { max-width: 1020px; }
+
+.site-header {
+  border-top: 0;
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(to bottom, var(--bg-soft), var(--bg));
+}
+
+.site-title, .site-title:visited { color: var(--ink); }
+
+a, a:visited { color: var(--brand); }
+a:hover { color: var(--brand-strong); text-decoration: underline; }
+
+h1, h2, h3 { letter-spacing: -0.02em; }
+h1 { font-size: 2.1rem; }
+h2 { margin-top: 2.2rem; }
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+  margin: 18px 0 8px;
+}
+
+.project-card {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px 16px 14px;
+  background: #fff;
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+  transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+  border-color: rgba(176, 141, 87, 0.35);
+}
+
+.project-card h3 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+}
+
+.project-card p {
+  margin: 0 0 12px;
+  color: var(--muted);
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project-tags li {
+  font-size: 0.85rem;
+  border: 1px solid rgba(176, 141, 87, 0.30);
+  background: rgba(176, 141, 87, 0.10);
+  padding: 3px 10px;
+  border-radius: 999px;
+  color: var(--brand-strong);
+}
+
+.page-heading {
+  border-left: 4px solid var(--brand);
+  padding-left: 12px;
+}
