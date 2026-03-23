@@ -1,24 +1,34 @@
 - name: "Talk-to-Data Slackbot"
-  description: "A Slackbot that allows users to interact with data using natural language queries."
+  description: "Slackbot that answers natural-language questions by querying data and returning results in Slack."
   url: "https://github.com/guibracco/talk-to-data-slackbot"
-  tags: ["python", "slack", "data", "ai"]
+  tags: ["python", "slack", "llm", "data"]
+  featured: true
+  sort: 10
 
 - name: "Data Analyst Agent"
-  description: "An AI-powered multi-agent orchestrator that assists data analysts in generating insights and reports."
+  description: "Multi-agent AI orchestrator that helps analysts generate insights and draft reports from datasets."
   url: "https://github.com/guibracco/data-analyst-agent"
-  tags: ["python", "ai", "data-analysis"]
-
-- name: "Data Cleaning Agent"
-  description: "An AI-powered data cleaning agent built with LangChain + LangGraphthat and delivered through Streamlit."
-  url: "https://github.com/guibracco/data-cleaning-agent"
-  tags: ["python", "ai", "data-preprocessing"]
+  tags: ["python", "llm", "agents", "data-analysis"]
+  featured: true
+  sort: 20
 
 - name: "EDA Workflow"
-  description: "An AI-powered exploratory data analysis workflow that performs consistent, first-pass analysis using LangChain and LangGraph. The workflow runs a fixed set of analysis tools, uses an LLM to extract observations after each step, and synthesizes findings into a summary with actionable recommendations."
+  description: "Repeatable, first-pass EDA workflow that runs a fixed tool suite, extracts observations per step, and synthesizes actionable recommendations."
   url: "https://github.com/guibracco/eda-workflow"
-  tags: ["python", "ai", "data-analysis"]
+  tags: ["python", "llm", "langchain", "langgraph", "data-analysis"]
+  featured: true
+  sort: 30
+
+- name: "Data Cleaning Agent"
+  description: "AI-assisted data cleaning agent built with LangChain + LangGraph and delivered via Streamlit."
+  url: "https://github.com/guibracco/data-cleaning-agent"
+  tags: ["python", "llm", "langchain", "langgraph", "streamlit", "data-preprocessing"]
+  featured: false
+  sort: 40
 
 - name: "Fortnite Store Analysis"
-  description: "An analysis of the game item shop from the perspective of economic game design"
+  description: "Economic game design look at the Fortnite item shop, with analysis and takeaways."
   url: "https://github.com/guibracco/fortnite-store-analysis"
-  tags: ["python", "html", "data-analysis"]
+  tags: ["python", "data-analysis", "viz", "html"]
+  featured: false
+  sort: 50

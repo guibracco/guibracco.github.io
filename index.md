@@ -5,11 +5,11 @@ title: "Home"
 
 # Guilherme Bracco
 
-Short tagline: what you do + what you’re focused on (e.g., “Backend + tooling, Python/Go, reliability-minded.”)
+I build **______** (what you build) with a focus on **______** (impact: reliability, speed, UX, etc.).
 
 - GitHub: https://github.com/guibracco
-- LinkedIn: https://linkedin.com/in/guibracco
-- Email: [REDACTED]
+- LinkedIn: ______
+- Email: ______
 
-## Featured projects
-You can see everything on the [Projects](/projects/) page.
+## Projects
+Browse everything on the [Projects](/projects/) page.
