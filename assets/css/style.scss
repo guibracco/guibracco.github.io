@@ -1,70 +1,81 @@
 ---
 ---
 
-/* Import Minima's styles */
 @import "minima";
 
-/* ---- Personal tweaks ---- */
+/* --- Old-gold product-ish theme --- */
 :root {
-  --brand: #2563eb;          /* blue */
-  --text: #0f172a;           /* slate-900 */
+  --brand: #b08d57;          /* old gold */
+  --brand-strong: #8f6f3e;   /* darker gold for hover */
+  --ink: #0f172a;            /* deep slate */
   --muted: #475569;          /* slate-600 */
   --border: #e2e8f0;         /* slate-200 */
-  --bg-soft: #f8fafc;        /* slate-50 */
+  --bg: #ffffff;
+  --bg-soft: #fbf7f0;        /* warm near-white */
+  --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
 }
 
-.site-title, .site-title:visited { color: var(--text); }
-a, a:visited { color: var(--brand); }
-a:hover { text-decoration: underline; }
-
 body {
-  color: var(--text);
+  background: var(--bg);
+  color: var(--ink);
   font-size: 17px;
   line-height: 1.7;
 }
 
+.wrapper { max-width: 1020px; }
+
 .site-header {
   border-top: 0;
   border-bottom: 1px solid var(--border);
+  background: linear-gradient(to bottom, var(--bg-soft), var(--bg));
 }
 
-.wrapper {
-  max-width: 980px; /* wider than default */
+.site-title, .site-title:visited { color: var(--ink); }
+
+a, a:visited { color: var(--brand); }
+a:hover { color: var(--brand-strong); text-decoration: underline; }
+
+/* Make headings feel more “designed” */
+h1, h2, h3 {
+  letter-spacing: -0.02em;
 }
+h1 { font-size: 2.1rem; }
+h2 { margin-top: 2.2rem; }
 
-.page-content {
-  padding-top: 28px;
-}
-
-/* Nice “hero” heading on home */
-.home h1, .home h2, .home h3 { letter-spacing: -0.02em; }
-
-/* Project cards (used below) */
+/* --- Project cards --- */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
   margin: 18px 0 8px;
 }
 
 .project-card {
   border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 14px 14px 12px;
-  background: white;
+  border-radius: 14px;
+  padding: 16px 16px 14px;
+  background: #fff;
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+  transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+  border-color: rgba(176, 141, 87, 0.35);
 }
 
 .project-card h3 {
-  margin-top: 0;
-  margin-bottom: 8px;
+  margin: 0 0 8px;
   font-size: 1.05rem;
 }
 
 .project-card p {
-  margin: 0 0 10px;
+  margin: 0 0 12px;
   color: var(--muted);
 }
 
+/* Tags as “chips” */
 .project-tags {
   display: flex;
   flex-wrap: wrap;
@@ -76,9 +87,15 @@ body {
 
 .project-tags li {
   font-size: 0.85rem;
-  border: 1px solid var(--border);
-  background: var(--bg-soft);
-  padding: 2px 10px;
+  border: 1px solid rgba(176, 141, 87, 0.30);
+  background: rgba(176, 141, 87, 0.10);
+  padding: 3px 10px;
   border-radius: 999px;
-  color: var(--muted);
+  color: var(--brand-strong);
+}
+
+/* Optional: make the post/page title stand out */
+.page-heading {
+  border-left: 4px solid var(--brand);
+  padding-left: 12px;
 }
