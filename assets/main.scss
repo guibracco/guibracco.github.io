@@ -35,10 +35,14 @@ body {
 a, a:visited { color: var(--brand); }
 a:hover { color: var(--brand-strong); text-decoration: underline; }
 
-h1, h2, h3 { letter-spacing: -0.02em; }
+/* Make headings feel more “designed” */
+h1, h2, h3 {
+  letter-spacing: -0.02em;
+}
 h1 { font-size: 2.1rem; }
 h2 { margin-top: 2.2rem; }
 
+/* --- Project cards --- */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -71,6 +75,7 @@ h2 { margin-top: 2.2rem; }
   color: var(--muted);
 }
 
+/* Tags as “chips” */
 .project-tags {
   display: flex;
   flex-wrap: wrap;
@@ -89,6 +94,7 @@ h2 { margin-top: 2.2rem; }
   color: var(--brand-strong);
 }
 
+/* Optional: make the post/page title stand out */
 .page-heading {
   border-left: 4px solid var(--brand);
   padding-left: 12px;
