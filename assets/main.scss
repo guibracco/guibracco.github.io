@@ -3,6 +3,25 @@
 
 @import "minima";
 
+/* Typography */
+:root {
+  --display-font: "Marcellus", Georgia, "Times New Roman", serif;
+}
+
+/* Site title + headings */
+.site-title,
+.post-title,
+.page-heading,
+h1, h2, h3, h4 {
+  font-family: var(--display-font);
+  font-weight: 400; /* Marcellus is regular weight */
+}
+
+/* Optional: make headings feel a bit more “display” */
+h1, h2, h3 {
+  letter-spacing: 0.01em;
+}
+
 /* --- Old-gold product-ish theme --- */
 :root {
   --brand: #b08d57;          /* old gold */
