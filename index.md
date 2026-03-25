@@ -3,8 +3,6 @@ layout: home
 title: "Home"
 ---
 
-# Guilherme Bracco
-
 I build **AI-first data tooling**: agents, workflows, and apps that help teams go from raw data → insights faster.
 
 ## Featured projects
