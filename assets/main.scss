@@ -123,3 +123,50 @@ h2 { margin-top: 2.2rem; }
   border-left: 4px solid var(--brand);
   padding-left: 12px;
 }
+
+/* Footer: icons only */
+.footer-icons-only .social-media-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-icons-only .social-media-list li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Hide the text label next to each icon */
+.footer-icons-only .social-media-list .username {
+  display: none;
+}
+
+/* Click target + hover feel */
+.footer-icons-only .social-media-list a {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.footer-icons-only .social-media-list a:hover {
+  background: rgba(176, 141, 87, 0.10);
+}
+
+/* Icon size */
+.footer-icons-only .social-media-list svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Optional: shrink the footer height a bit */
+.site-footer {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
