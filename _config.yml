@@ -7,7 +7,7 @@ header_pages:
   - projects.md
 
 minima:
-  skin: auto
+  skin: classic
 
 # Socials used by Minima (drives the footer social-media-list)
 github_username: guibracco

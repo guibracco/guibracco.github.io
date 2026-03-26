@@ -3,21 +3,50 @@
 
 @import "minima";
 
-/* Typography */
+/* =========================
+   Theme tokens (light default)
+   ========================= */
 :root {
+  /* Let the browser render built-in UI appropriately for both schemes */
+  color-scheme: light dark;
+
+  /* Fonts */
   --display-font: "Marcellus", Georgia, "Times New Roman", serif;
   --body-font: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+
+  /* Brand */
+  --brand: #b08d57;          /* old gold */
+  --brand-strong: #8f6f3e;   /* darker gold for hover */
+
+  /* Light mode palette */
+  --ink: #0f172a;            /* deep slate */
+  --muted: #475569;          /* slate-600 */
+  --border: #e2e8f0;         /* slate-200 */
+  --bg: #ffffff;
+  --bg-soft: #fbf7f0;        /* warm near-white */
+
+  /* Surfaces */
+  --surface: #ffffff;        /* cards, panels */
+
+  /* Effects */
+  --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
 }
 
+/* =========================
+   Base typography
+   ========================= */
 body {
   font-family: var(--body-font);
+  background: var(--bg);
+  color: var(--ink);
+  font-size: 17px;
+  line-height: 1.7;
 }
 
 /* Nav + small UI text should match body */
 .site-nav,
 .site-nav .page-link,
-.post-meta,
-.footer-col {
+.post-meta {
   font-family: var(--body-font);
 }
 
@@ -27,46 +56,50 @@ body {
 .page-heading,
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--display-font);
-  font-weight: 400; /* Marcellus is regular weight */
-  letter-spacing: -0.01em; /* keep only one heading letter-spacing rule */
-}
-
-/* --- Old-gold product-ish theme --- */
-:root {
-  --brand: #b08d57;          /* old gold */
-  --brand-strong: #8f6f3e;   /* darker gold for hover */
-  --ink: #0f172a;            /* deep slate */
-  --muted: #475569;          /* slate-600 */
-  --border: #e2e8f0;         /* slate-200 */
-  --bg: #ffffff;
-  --bg-soft: #fbf7f0;        /* warm near-white */
-  --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
-}
-
-body {
-  background: var(--bg);
-  color: var(--ink);
-  font-size: 17px;
-  line-height: 1.7;
+  font-weight: 400;         /* Marcellus is regular weight */
+  letter-spacing: -0.01em;  /* keep only one heading letter-spacing rule */
+  line-height: 1.15;        /* tighter heading rhythm */
 }
 
 .wrapper { max-width: 1020px; }
 
+/* =========================
+   Header + links
+   ========================= */
 .site-header {
   border-top: 0;
   border-bottom: 1px solid var(--border);
   background: linear-gradient(to bottom, var(--bg-soft), var(--bg));
 }
 
-.site-title, .site-title:visited { color: var(--ink); }
+.site-title,
+.site-title:visited {
+  color: var(--ink);
+}
 
-a, a:visited { color: var(--brand); }
-a:hover { color: var(--brand-strong); text-decoration: underline; }
+a,
+a:visited {
+  color: var(--brand);
+}
 
+a:hover {
+  color: var(--brand-strong);
+  text-decoration: underline;
+}
+
+/* Headings sizing */
 h1 { font-size: 2.1rem; }
 h2 { margin-top: 2.2rem; }
 
-/* --- Project cards --- */
+/* Optional: make the post/page title stand out */
+.page-heading {
+  border-left: 4px solid var(--brand);
+  padding-left: 12px;
+}
+
+/* =========================
+   Project cards
+   ========================= */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -78,8 +111,8 @@ h2 { margin-top: 2.2rem; }
   border: 1px solid var(--border);
   border-radius: 14px;
   padding: 16px 16px 14px;
-  background: #fff;
-  box-shadow: 0 0 0 rgba(0,0,0,0);
+  background: var(--surface);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
   transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease;
 }
 
@@ -118,13 +151,14 @@ h2 { margin-top: 2.2rem; }
   color: var(--brand-strong);
 }
 
-/* Optional: make the post/page title stand out */
-.page-heading {
-  border-left: 4px solid var(--brand);
-  padding-left: 12px;
+/* =========================
+   Footer: icons only
+   ========================= */
+.site-footer {
+  padding-top: 14px;
+  padding-bottom: 14px;
 }
 
-/* Footer: icons only */
 .footer-icons-only .social-media-list {
   display: flex;
   justify-content: center;
@@ -156,7 +190,8 @@ h2 { margin-top: 2.2rem; }
 }
 
 .footer-icons-only .social-media-list a:hover {
-  background: rgba(176, 141, 87, 0.10);
+  /* Use theme brand so it adapts in dark mode too */
+  background: color-mix(in srgb, var(--brand) 12%, transparent);
 }
 
 /* Icon size */
@@ -165,8 +200,73 @@ h2 { margin-top: 2.2rem; }
   height: 18px;
 }
 
-/* Optional: shrink the footer height a bit */
-.site-footer {
-  padding-top: 14px;
-  padding-bottom: 14px;
+/* =========================
+   Auto dark mode
+   ========================= */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b1220;           /* deep navy */
+    --bg-soft: #0f1a2e;      /* header gradient top */
+    --ink: #e5e7eb;          /* near-white text */
+    --muted: #a1a1aa;        /* muted text */
+    --border: rgba(226, 232, 240, 0.18);
+    --shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+
+    /* Surfaces */
+    --surface: rgba(255, 255, 255, 0.04);
+
+    /* brand gold tuned for dark backgrounds */
+    --brand: #d6b27a;
+    --brand-strong: #e3c48f;
+  }
+
+  /* Header + footer borders */
+  .site-header {
+    border-bottom: 1px solid var(--border);
+    background: linear-gradient(to bottom, var(--bg-soft), var(--bg));
+  }
+
+  .site-footer {
+    border-top: 1px solid var(--border);
+    background: transparent;
+  }
+
+  /* Card hover border tuned for dark */
+  .project-card:hover {
+    border-color: rgba(214, 178, 122, 0.45);
+  }
+
+  /* Tag “chips” (dark) */
+  .project-tags li {
+    border-color: rgba(214, 178, 122, 0.35);
+    background: rgba(214, 178, 122, 0.12);
+    color: var(--brand-strong);
+  }
+}
+
+/* =========================
+   Extra dark-mode fixes for Minima defaults (common culprits)
+   ========================= */
+@media (prefers-color-scheme: dark) {
+  /* Code blocks */
+  pre,
+  code {
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  pre {
+    border: 1px solid var(--border);
+  }
+
+  /* Blockquotes */
+  blockquote {
+    color: var(--muted);
+    border-left-color: rgba(214, 178, 122, 0.55);
+  }
+
+  /* Tables */
+  table th,
+  table td {
+    border-color: var(--border);
+  }
 }
