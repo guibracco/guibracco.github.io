@@ -124,7 +124,7 @@ h2 { margin-top: 2.2rem; }
   padding-left: 12px;
 }
 
-/* Footer: hide site title link if it repeats */
-.site-footer .site-title {
+/* Footer: hide the second (duplicate) site title line */
+.footer-heading + .contact-list {
   display: none;
 }
