@@ -123,3 +123,8 @@ h2 { margin-top: 2.2rem; }
   border-left: 4px solid var(--brand);
   padding-left: 12px;
 }
+
+/* Footer: hide site title link if it repeats */
+.site-footer .site-title {
+  display: none;
+}
