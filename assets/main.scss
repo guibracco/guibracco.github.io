@@ -123,8 +123,3 @@ h2 { margin-top: 2.2rem; }
   border-left: 4px solid var(--brand);
   padding-left: 12px;
 }
-
-/* Footer: hide the second (duplicate) site title line */
-.footer-heading + .contact-list {
-  display: none;
-}
