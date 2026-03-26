@@ -1,8 +1,0 @@
-title: "Guilherme Bracco"
-description: "Portfolio and projects"
-theme: minima
-header_pages:
-  - about.md
-  - projects.md
-minima:
-  skin: classic

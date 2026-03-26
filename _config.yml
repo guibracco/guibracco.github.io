@@ -1,8 +1,15 @@
 title: "Guilherme Bracco"
 description: "Portfolio"
 theme: minima
+
 header_pages:
   - about.md
   - projects.md
+
 minima:
   skin: classic
+
+# Socials used by Minima (drives the footer social-media-list)
+github_username: guibracco
+linkedin_username: guibracco
+twitter_username: guibracco
