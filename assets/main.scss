@@ -241,6 +241,32 @@ h2 { margin-top: 2.2rem; }
     background: rgba(214, 178, 122, 0.12);
     color: var(--brand-strong);
   }
+
+  /* Header nav links (desktop + mobile) */
+  .site-nav .page-link,
+  .site-nav .page-link:visited {
+    color: var(--ink);
+  }
+
+  .site-nav .page-link:hover {
+    color: var(--brand-strong);
+  }
+
+  /* Mobile menu panel background + border (Minima uses a light panel by default) */
+  .site-nav {
+    background: transparent;
+  }
+
+  .site-nav .nav-trigger:checked ~ .trigger {
+    background: var(--bg);
+    border: 1px solid var(--border);
+  }
+
+  /* Sometimes Minima applies a background directly to the trigger container */
+  .site-nav .trigger {
+    background: var(--bg);
+    border: 1px solid var(--border);
+  }
 }
 
 /* =========================
