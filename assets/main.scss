@@ -100,9 +100,7 @@ h2 { margin-top: 2.2rem; }
    Nav: Desktop transparent, Mobile glass panel
    ========================= */
 
-/* Desktop/default: keep header/nav background transparent */
-.site-header,
-.site-header .wrapper,
+/* Desktop: keep header gradient; make only the nav itself transparent */
 .site-nav {
   background: transparent !important;
 }
@@ -274,10 +272,6 @@ h2 { margin-top: 2.2rem; }
   .site-nav .page-link,
   .site-nav .page-link:visited {
     color: var(--ink);
-  }
-
-  .site-nav .page-link:hover {
-    color: var(--brand-strong);
   }
 }
 
