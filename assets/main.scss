@@ -97,6 +97,34 @@ h2 { margin-top: 2.2rem; }
 }
 
 /* =========================
+   Nav: Desktop transparent, Mobile glass panel
+   ========================= */
+
+/* Desktop/default: keep header/nav background transparent */
+.site-header,
+.site-header .wrapper,
+.site-nav {
+  background: transparent !important;
+}
+
+/* Mobile dropdown panel (“trigger” in Minima): glass */
+@media (max-width: 600px) {
+  .site-nav .trigger {
+    background: color-mix(in srgb, var(--bg) 70%, transparent);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  /* Make sure links are readable inside the mobile dropdown */
+  .site-nav .trigger .page-link,
+  .site-nav .trigger .page-link:visited {
+    color: var(--ink);
+  }
+}
+
+/* =========================
    Project cards
    ========================= */
 .project-grid {
@@ -248,20 +276,8 @@ h2 { margin-top: 2.2rem; }
     color: var(--ink);
   }
 
-  /* Mobile menu panel background + border (Minima uses a light panel by default) */
-  .site-nav {
-    background: transparent;
-  }
-
-  .site-nav .nav-trigger:checked ~ .trigger {
-    background: var(--bg);
-  /*  border: 1px solid var(--border); */
-  }
-
-  /* Sometimes Minima applies a background directly to the trigger container */
-  .site-nav .trigger {
-    background: var(--bg);
-  /*  border: 1px solid var(--border); */
+  .site-nav .page-link:hover {
+    color: var(--brand-strong);
   }
 }
 
