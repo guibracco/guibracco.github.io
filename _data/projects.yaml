@@ -32,3 +32,10 @@
   tags: ["python", "data-analysis", "viz", "html"]
   featured: false
   sort: 50
+
+- name: "Probability and Statistics Teaching"
+  description: "Exercises in Probability and Statistics for Hyper Island Data Analyst (DA25STO) crew."
+  url: "https://github.com/guibracco/da25sto-math-stats"
+  tags: ["python", "data-analysis", "statistics", "probability"]
+  featured: false
+  sort: 60
