@@ -274,30 +274,3 @@ h2 { margin-top: 2.2rem; }
     color: var(--ink);
   }
 }
-
-/* =========================
-   Extra dark-mode fixes for Minima defaults (common culprits)
-   ========================= */
-@media (prefers-color-scheme: dark) {
-  /* Code blocks */
-  pre,
-  code {
-    background: rgba(255, 255, 255, 0.06);
-  }
-
-  pre {
-    border: 1px solid var(--border);
-  }
-
-  /* Blockquotes */
-  blockquote {
-    color: var(--muted);
-    border-left-color: rgba(214, 178, 122, 0.55);
-  }
-
-  /* Tables */
-  table th,
-  table td {
-    border-color: var(--border);
-  }
-}
